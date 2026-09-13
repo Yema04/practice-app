@@ -29,6 +29,9 @@ export default async function MemberPage({ params }){
             <p className="mt-3 text-lg text-gray-400">
                 {member.role}
             </p>
+            <p className="text-xl text-gray-400">
+                {member.id}
+            </p>
             </div>
         </main>
     )

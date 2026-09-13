@@ -13,9 +13,10 @@ export default function TeamPage() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {teamMembers.map((member, index) => (
+                {teamMembers.map((member) => (
                     <UserCard
-                        key={index}
+                        key={member.id}
+                        id={member.id}
                         name={member.name}
                         role={member.role}
                         title={member.title}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-function UserCard({ title, name, role }) {
+function UserCard({ id, title, name, role }) {
     const [likes, setLikes] = useState(0);
 
     return (
@@ -11,7 +11,7 @@ function UserCard({ title, name, role }) {
             
             {/* Clickable card content */}
             <Link
-                href={`/team/${encodeURIComponent(name)}`}
+                href={`/team/${encodeURIComponent(id)}`}
                 className="block p-6"
             >
                 <h2 className="text-xl font-semibold mb-2 text-gray-100">
@@ -20,6 +20,9 @@ function UserCard({ title, name, role }) {
 
                 <p className="text-gray-400">
                     {role}
+                </p>
+                <p className="text-xl text-gray-100">
+                  ID: {id}
                 </p>
             </Link>
 
